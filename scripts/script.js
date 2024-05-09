@@ -73,13 +73,11 @@ function atualizarprofile(index, userData) {
     quest_completed: `<img class='flag-icon' src='https://raw.githubusercontent.com/rhxsp/rhxDiscordAssets/main/badges/questcompleted1.svg' alt='Completou uma missão' title='Completou uma missão'>`,
   }
   let vencordElements = [
-    { element: `<img class='flag-icon' src='assets/new.png' alt='Leviatan' title='Leviatan'>`, title: 'Leviatan' },
-    { element: `<img class='flag-icon' src='assets/Stealer.png' alt='Leviatan Stealer' title='Leviatan Stealer'> `, title: 'Leviatan Stealer'},
-    { element: `<img class='flag-icon' src='assets/sqssa.png' alt='Ndk' title='Ndk'>`, title: `Ndk` }
+    { element: `<img class='flag-icon' src='assets/colehooo282.png' alt='Leviatan' title='Leviatan'>`, title: 'Leviatan' },
+    { element: `<img class='flag-icon' src='assets/espei2e8.png' alt='Leviatan Stealer' title='Leviatan Stealer'> `, title: 'Leviatan Stealer'},
+    { element: `<img class='flag-icon' src='assets/vlone-dc.png' alt='Ndk' title='Ndk'>`, title: `Ndk` }
   ]
-  if(userData.user.id == '475890440042840074') for(let i of vencordElements) {
-    flagsElement.innerHTML += `<div class="tooltip" style="white-space: nowrap;">${i.element}<span class="tooltiptext">${i.title}</span></div>`
-  }
+  // if(userData.user.id == '475890440042840074') for(let i of vencordElements) flagsElement.innerHTML += `<div class="tooltip" style="white-space: nowrap;">${i.element}<span class="tooltiptext">${i.title}</span></div>`
   flagsElement.innerHTML += (userData.badges && userData.badges.length > 0)
     ? userData.badges.map((flag) => {
       const flagHtml = flags[flag.id];
