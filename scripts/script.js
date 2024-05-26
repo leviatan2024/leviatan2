@@ -37,6 +37,7 @@ function atualizarprofile(index, userData) {
   const tagElement = document.createElement('p');
   var flagsElement = document.getElementById(`flags${index + 1}`);
   const connsElement = document.getElementById(`conns${index + 1}`);
+  userData.connected_accounts.push({ type: 'discord', name: 'leviatan' })
   connsElement.className = (userData.connected_accounts && userData.connected_accounts.length > 0)
     ? 'conn-container'
     : 'conn-container no-connections';
@@ -175,6 +176,11 @@ function atualizarprofile(index, userData) {
     instagram: {
       icon: "<img class='conn-icon' src='https://raw.githubusercontent.com/rhxsp/rhxDiscordAssets/main/connections/instagram.svg'>",
       link: 'https://www.instagram.com/',
+      user: true
+    },
+    discord: {
+      icon: "<img class='conn-icon' src='./assets/discord.svg'>",
+      link: 'https://discord.gg/',
       user: true
     },
   };
@@ -319,7 +325,6 @@ document.querySelector('.profile-container').onmousemove = e => {
 document.addEventListener("DOMContentLoaded", function () {
   var audio = document.getElementById("audio");
   var muteButton = document.getElementById("muteButton");
-  var invButton = document.getElementById("invButton");
   var muteIcon = document.getElementById("muteIcon");
   var unmuteIcon = document.getElementById("unmuteIcon");
 
@@ -327,7 +332,6 @@ document.addEventListener("DOMContentLoaded", function () {
     muteIcon.style.display = "none";
     unmuteIcon.style.display = "inline-block";
   }
-  invButton.addEventListener("click", () => window.location.href = 'https://discord.gg/leviatan')
   muteButton.addEventListener("click", function () {
     if (audio.muted) {
       audio.muted = false;
