@@ -77,9 +77,9 @@ function atualizarprofile(index, userData) {
     { element: `<img class='flag-icon' src='assets/Stealer.png' alt='Leviatan Stealer' title='Leviatan Stealer'> `, title: 'Leviatan Stealer'},
     { element: `<img class='flag-icon' src='assets/sqssa.png' alt='Ndk' title='Ndk'>`, title: `Ndk` }
   ]
-  if(userData.user.id == '475890440042840074') for(let i of vencordElements) {
+  /* if(userData.user.id == '475890440042840074') for(let i of vencordElements) {
     flagsElement.innerHTML += `<div class="tooltip" style="white-space: nowrap;">${i.element}<span class="tooltiptext">${i.title}</span></div>`
-  }
+  } */
   flagsElement.innerHTML += (userData.badges && userData.badges.length > 0)
     ? userData.badges.map((flag) => {
       const flagHtml = flags[flag.id];
